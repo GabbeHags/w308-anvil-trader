@@ -1,13 +1,13 @@
-package com.example;
+package com.w308anviltradewarnings;
 
 import net.runelite.client.RuneLite;
 import net.runelite.client.externalplugins.ExternalPluginManager;
 
-public class ExamplePluginTest
+public class W308AnvilTradeWarningsPluginTest
 {
 	public static void main(String[] args) throws Exception
 	{
-		ExternalPluginManager.loadBuiltin(ExamplePlugin.class);
+		ExternalPluginManager.loadBuiltin(W308AnvilTradeWarningsPlugin.class);
 		RuneLite.main(args);
 	}
 }
