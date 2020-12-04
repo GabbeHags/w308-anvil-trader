@@ -1,14 +1,14 @@
-package com.w308anviltradewarnings;
+package com.w308anviltrader;
 
 import net.runelite.client.config.Config;
 import net.runelite.client.config.ConfigGroup;
 import net.runelite.client.config.ConfigItem;
 
-@ConfigGroup("w308anviltradewarnings")
-public interface W308AnvilTradeWarningsConfig extends Config {
+@ConfigGroup("w308anviltrader")
+public interface W308AnvilTraderConfig extends Config {
     @ConfigItem(
             keyName = "boolCheckIfInCC",
-            name = "Check If Player Is In CC",
+            name = "Check if player is in clan chat",
             description = "Checks if the player you are trading is in the CC"
 //            position = 0
     )
@@ -18,7 +18,7 @@ public interface W308AnvilTradeWarningsConfig extends Config {
 
     @ConfigItem(
             keyName = "boolCalcTradedItem",
-            name = "Calculate Trade Screen",
+            name = "Calculate trade screen",
             description = "Calculates the current trading screen and checks if its OK"
 //            position = 0
     )

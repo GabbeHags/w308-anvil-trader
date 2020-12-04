@@ -1,4 +1,4 @@
-package com.w308anviltradewarnings;
+package com.w308anviltrader;
 
 import com.google.inject.Provides;
 
@@ -10,15 +10,12 @@ import net.runelite.api.Client;
 import net.runelite.api.GameState;
 import net.runelite.api.events.GameStateChanged;
 import net.runelite.api.events.WidgetLoaded;
-import net.runelite.api.widgets.Widget;
 import net.runelite.api.widgets.WidgetID;
 import net.runelite.client.config.ConfigManager;
 import net.runelite.client.eventbus.Subscribe;
 import net.runelite.client.plugins.Plugin;
 import net.runelite.client.plugins.PluginDescriptor;
 import net.runelite.api.InventoryID;
-
-import java.util.Arrays;
 
 //TODO
 //  check if you are in the cc w308 anvil
@@ -28,18 +25,18 @@ import java.util.Arrays;
 
 @Slf4j
 @PluginDescriptor(
-        name = "W308 Anvil Trade Warnings",
+        name = "W308 Anvil Trader",
         description = "A simple example plugin to illustrate how to write plugin config menus",
         tags = {"trade", "warning", "rune", "high", "alch"},
         loadWhenOutdated = true,
         enabledByDefault = true
 )
-public class W308AnvilTradeWarningsPlugin extends Plugin {
+public class W308AnvilTraderPlugin extends Plugin {
     @Inject
     private Client client;
 
     @Inject
-    private W308AnvilTradeWarningsConfig config;
+    private W308AnvilTraderConfig config;
 
     @Override
     protected void startUp() throws Exception {
@@ -69,7 +66,7 @@ public class W308AnvilTradeWarningsPlugin extends Plugin {
     }
 
     @Provides
-    W308AnvilTradeWarningsConfig provideConfig(ConfigManager configManager) {
-        return configManager.getConfig(W308AnvilTradeWarningsConfig.class);
+    W308AnvilTraderConfig provideConfig(ConfigManager configManager) {
+        return configManager.getConfig(W308AnvilTraderConfig.class);
     }
 }
